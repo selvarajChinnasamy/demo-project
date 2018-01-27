@@ -1,6 +1,5 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import { Icon, Body, Container, Header, Content } from 'native-base';
 import LoginScreen from './Screens/LoginScreen';
 import ProfileScreen from './Screens/Profile';
 import { StackNavigator } from 'react-navigation'
@@ -14,8 +13,12 @@ export default class App extends React.Component {
 }
 
 const AppNavigator = StackNavigator({
-  LoginScreen: { screen : LoginScreen },
-  ProfileScreen : { screen : ProfileScreen },
+  LoginScreen: { screen : LoginScreen,   navigationOptions: ({navigation}) => ({
+    header: false
+  }), },
+  ProfileScreen : { screen : ProfileScreen,   navigationOptions: ({navigation}) => ({
+    header: false
+  }), },
 });
 
 const styles = StyleSheet.create({
