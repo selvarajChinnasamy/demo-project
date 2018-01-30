@@ -6,8 +6,12 @@
     "native-base": "^2.3.7",
     "react": "16.2.0",
     "react-native": "https://github.com/expo/react-native/archive/sdk-25.0.0.tar.gz",
+    "react-native-carousel-control": "^2.0.1",
     "react-native-elements": "^0.19.0",
+    "react-native-image-slider": "^1.1.5",
+    "react-native-swiper": "^1.5.13",
     "react-native-vector-icons": "^4.5.0",
-    "react-navigation": "^1.0.0-beta.27"
+    "react-navigation": "^1.0.0-beta.27",
+    "simple-carousel-react-native": "^1.0.2"
   }
 }

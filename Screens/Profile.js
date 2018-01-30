@@ -9,9 +9,7 @@ class ProfileScreen extends React.Component {
 
     render() {
         return (
-            <View>
                 <AppDrawerNavigator />
-            </View>
         );
     }
 }
@@ -22,12 +20,18 @@ const AppDrawerNavigator = DrawerNavigator({
 }, {
         contentComponent: props =>
             <View >
+                <Header backgroundColor='#6cac1a' style={styles.headerstyle}
+                    leftComponent={<View style={styles.iconstyle} ><Icon color='#fff' name="home" onPress={() => props.navigation.navigate('Profile') } /><Text style = {{ color: '#fff' }} >  Agro Deals</Text></View>}
+                    rightComponent={<View style={styles.iconstyle} ><Icon color='#fff' name="list" /></View>}
+                />
                 <View style={{ alignItems: 'center', }}>
                     <Image
                         style={styles.drawerImage}
                         source={require('../assets/splash.jpg')} />
                 </View>
-                <DrawerItems {...props} />
+                <View style={styles.drawerItemsstyle} >
+                <DrawerItems   {...props} />
+                </View>
             </View>
     });
 
@@ -41,10 +45,20 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
     },
+    iconstyle: {
+        flexDirection: 'row',
+        marginTop: 30,
+    },
+    headerstyle: {
+        height: 20,
+    },
     drawerImage: {
         height: 124,
         width: 124,
+        marginTop: 30,
         borderRadius: 75,
-        margin: 8,
+    },
+    drawerItemsstyle:{
+        marginTop: 20,
     }
 });
